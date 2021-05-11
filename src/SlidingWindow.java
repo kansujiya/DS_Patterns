@@ -6,6 +6,7 @@ Sliding window pattern
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Vector;
 
 
 /*
@@ -227,6 +228,22 @@ public class SlidingWindow {
 
         System.out.println("Found Happy number for 23:"+ HappyNumber.find(23));
         System.out.println("Found Happy number for 12:"+ HappyNumber.find(12));
+
+
+        //TripletSumToZero
+        System.out.println("Triplet Pairs founds:"+ TripletSumToZero.searchTriplet(new int[] {-3, 0, 1, 2, -1, 1, -2}));
+
+        //TripletSumToClosest
+        Vector<Integer> arr = new Vector<Integer>();
+        arr.add(-2);
+        arr.add(0);
+        arr.add(1);
+        arr.add(2);
+        System.out.println("Triplet Pairs founds at closest:"+ TripletSumCloseToTarget.searchTriplet(arr,2));
+
+        //TripletToSmallestSum
+        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 0, 2, 3}, 3));
+        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 4, 2, 1, 3}, 5));
 
     }
 }

@@ -178,72 +178,72 @@ class MaxFruitCount2Type{
 }
 
 public class SlidingWindow {
-    public static void  main(String[] args) {
-        System.out.println("Welcome to DS world");
-        double[] avgArr = AverageOfSubarrayOfSizeKBruteForce.findAverages(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
-        System.out.println("Averages of subarrays of size K: " + Arrays.toString(avgArr));
-        double max = 0;
-        for(int i = 0; i < avgArr.length; i++) {
-            if (avgArr[i] > max) {
-                max = avgArr[i];
-            }
-        }
-        System.out.println(max);
-
-        double[] avgSlideArr = AverageOfSubarrayOfSizeKSlidingWindow.findAverages(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
-        System.out.println("Averages of subarrays of size K: " + Arrays.toString(avgSlideArr));
-
-        int maxContinues = MaxSumSubArrayOfSizeK.findMaxSumSubArray(3, new int[] { 2, 1, 5, 1, 3, 2 });
-        System.out.println("max of subarrays of size K: " + maxContinues);
-
-        int minContinuesSum = MinSizeSubArraySum.findMinSubArray(7, new int[] { 8, 1, 5, 2, 3, 2 });
-        System.out.println("min of subarrays sum : " + minContinuesSum);
-
-
-        System.out.println("Longest substring with K distinct char:" + LongestSubstringKDistinct.findLength("araaci",2));
-
-        System.out.println("Longest substring with K distinct fruit:" + MaxFruitCount2Type.findLength(new char[] {'A', 'B', 'C', 'B', 'B', 'C'}));
-
-        System.out.println("Target sum at index:"+ Arrays.toString(PairWIthTargetSumUsingTwoPointer.search(new int[] {1, 2, 3, 4, 6},6)));
-        System.out.println("Target sum at index:"+ Arrays.toString(PairWIthTargetSumUsingHashMap.search(new int[] {1, 2, 3, 4, 6},6)));
-        System.out.println("Target sum at index:"+ RemoveDuplicate.remove(new int[] {2, 2, 2, 11}));
-        System.out.println("Target sum at index:"+ RemoveDuplicate.remove(new int[] {2, 3, 3, 3, 6, 9, 9}));
-
-        //detect linklist cycle
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(2);
-        head.next.next = new ListNode(3);
-        head.next.next.next = new ListNode(4);
-        head.next.next.next.next = new ListNode(5);
-        head.next.next.next.next.next = new ListNode(6);
-
-        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
-
-        head.next.next.next.next.next.next = head.next.next.next;
-
-        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
-
-        head.next.next.next.next.next.next = head;
-        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
-
-        System.out.println("Found Happy number for 23:"+ HappyNumber.find(23));
-        System.out.println("Found Happy number for 12:"+ HappyNumber.find(12));
-
-
-        //TripletSumToZero
-        System.out.println("Triplet Pairs founds:"+ TripletSumToZero.searchTriplet(new int[] {-3, 0, 1, 2, -1, 1, -2}));
-
-        //TripletSumToClosest
-        Vector<Integer> arr = new Vector<Integer>();
-        arr.add(-2);
-        arr.add(0);
-        arr.add(1);
-        arr.add(2);
-        System.out.println("Triplet Pairs founds at closest:"+ TripletSumCloseToTarget.searchTriplet(arr,2));
-
-        //TripletToSmallestSum
-        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 0, 2, 3}, 3));
-        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 4, 2, 1, 3}, 5));
-
-    }
+//    public static void  main(String[] args) {
+//        System.out.println("Welcome to DS world");
+//        double[] avgArr = AverageOfSubarrayOfSizeKBruteForce.findAverages(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
+//        System.out.println("Averages of subarrays of size K: " + Arrays.toString(avgArr));
+//        double max = 0;
+//        for(int i = 0; i < avgArr.length; i++) {
+//            if (avgArr[i] > max) {
+//                max = avgArr[i];
+//            }
+//        }
+//        System.out.println(max);
+//
+//        double[] avgSlideArr = AverageOfSubarrayOfSizeKSlidingWindow.findAverages(5, new int[] { 1, 3, 2, 6, -1, 4, 1, 8, 2 });
+//        System.out.println("Averages of subarrays of size K: " + Arrays.toString(avgSlideArr));
+//
+//        int maxContinues = MaxSumSubArrayOfSizeK.findMaxSumSubArray(3, new int[] { 2, 1, 5, 1, 3, 2 });
+//        System.out.println("max of subarrays of size K: " + maxContinues);
+//
+//        int minContinuesSum = MinSizeSubArraySum.findMinSubArray(7, new int[] { 8, 1, 5, 2, 3, 2 });
+//        System.out.println("min of subarrays sum : " + minContinuesSum);
+//
+//
+//        System.out.println("Longest substring with K distinct char:" + LongestSubstringKDistinct.findLength("araaci",2));
+//
+//        System.out.println("Longest substring with K distinct fruit:" + MaxFruitCount2Type.findLength(new char[] {'A', 'B', 'C', 'B', 'B', 'C'}));
+//
+//        System.out.println("Target sum at index:"+ Arrays.toString(PairWIthTargetSumUsingTwoPointer.search(new int[] {1, 2, 3, 4, 6},6)));
+//        System.out.println("Target sum at index:"+ Arrays.toString(PairWIthTargetSumUsingHashMap.search(new int[] {1, 2, 3, 4, 6},6)));
+//        System.out.println("Target sum at index:"+ RemoveDuplicate.remove(new int[] {2, 2, 2, 11}));
+//        System.out.println("Target sum at index:"+ RemoveDuplicate.remove(new int[] {2, 3, 3, 3, 6, 9, 9}));
+//
+//        //detect linklist cycle
+//        ListNode head = new ListNode(1);
+//        head.next = new ListNode(2);
+//        head.next.next = new ListNode(3);
+//        head.next.next.next = new ListNode(4);
+//        head.next.next.next.next = new ListNode(5);
+//        head.next.next.next.next.next = new ListNode(6);
+//
+//        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
+//
+//        head.next.next.next.next.next.next = head.next.next.next;
+//
+//        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
+//
+//        head.next.next.next.next.next.next = head;
+//        System.out.println("List has cycle:"+ LinklistCycle.hasCycle(head));
+//
+//        System.out.println("Found Happy number for 23:"+ HappyNumber.find(23));
+//        System.out.println("Found Happy number for 12:"+ HappyNumber.find(12));
+//
+//
+//        //TripletSumToZero
+//        System.out.println("Triplet Pairs founds:"+ TripletSumToZero.searchTriplet(new int[] {-3, 0, 1, 2, -1, 1, -2}));
+//
+//        //TripletSumToClosest
+//        Vector<Integer> arr = new Vector<Integer>();
+//        arr.add(-2);
+//        arr.add(0);
+//        arr.add(1);
+//        arr.add(2);
+//        System.out.println("Triplet Pairs founds at closest:"+ TripletSumCloseToTarget.searchTriplet(arr,2));
+//
+//        //TripletToSmallestSum
+//        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 0, 2, 3}, 3));
+//        System.out.println("Triplet Pairs founds for smallest sum:"+ TripletWithSmallestSum.searchSmallestTriplet(new int[] {-1, 4, 2, 1, 3}, 5));
+//
+//    }
 }
